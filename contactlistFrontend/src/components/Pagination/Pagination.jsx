@@ -1,5 +1,5 @@
 import React from "react";
-import "./Pagination.css"
+import "./Pagination.css";
 
 const Pagination = ({ handlePaginate, currentPage, totalPages }) => {
   return (
@@ -10,7 +10,7 @@ const Pagination = ({ handlePaginate, currentPage, totalPages }) => {
             onClick={() => handlePaginate(currentPage - 1)}
             disabled={currentPage === 1}
           >
-          Prev
+            Prev
           </button>
         </li>
         {[...Array(totalPages).keys()].map((number) => (
