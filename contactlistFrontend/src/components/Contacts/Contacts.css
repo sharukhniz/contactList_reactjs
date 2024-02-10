@@ -1,0 +1,8 @@
+:root .table {
+  --bs-table-bg: #d2ebff;
+  border-color: #0063B2FF;
+}
+
+.btn:first-child {
+  margin-right: 10px;
+}

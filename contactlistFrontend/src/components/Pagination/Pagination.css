@@ -1,0 +1,41 @@
+/* .container{
+    display: flex;
+    justify-content: center ;
+    gap: 2px;
+} */
+/* .pagination_button{
+    border: none;
+    border-radius: 5px;
+    
+} */
+.paginationContainer{
+
+    display: flex;
+    justify-content: center;
+
+}
+.pagination {
+    gap: 5px;
+}
+
+.paginationContainer ul li button {
+    border: 3px solid white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: #9CC3D5FF;
+}
+.pagination li.active button {
+    border: 3px solid white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: rgb(75, 167, 210);
+}
+
+.pagination button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+

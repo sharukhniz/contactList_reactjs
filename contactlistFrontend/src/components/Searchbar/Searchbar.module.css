@@ -1,0 +1,20 @@
+.search_input:focus-visible {
+    border: none;
+    outline: none;
+}
+
+.search_bar {
+    border: none;
+}
+
+.search_input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search_bar input[type="text"]{
+    background-color: #d2ebff;
+    border:  2px solid white;
+}
