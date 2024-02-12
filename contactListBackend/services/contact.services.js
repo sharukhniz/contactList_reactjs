@@ -1,6 +1,6 @@
 const contact = require("../model/contact.model");
 
-const findContacts = async ({ page = 1, limit = 10, search }) => {
+  const findContacts = async ({ page = 1, limit = 10, search }) => {
   const pipeline = [];
 
   if (search) {

@@ -18,7 +18,7 @@ import "./Contacts.css";
 
 const Contacts = () => {
   const dispatch = useDispatch();
-  const { contacts, pageCount, limit, search,page } = useSelector(
+  const { contacts, pageCount, limit, search, page } = useSelector(
     (state) => state.contacts
   );
 
@@ -28,17 +28,11 @@ const Contacts = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
 
-  // const [currentPage, setCurrentPage] = useState(1);
-
   useEffect(() => {
     dispatch(getContact({ page, limit, search }));
   }, [dispatch, page, limit, search]);
 
   // ---**Pagination***---
-
-  // const handlePageClick = ({ selected }) => {
-  //   setCurrentPage(selected + 1);
-  // };
 
   const handlePaginate = (newPage) => {
     dispatch(setPage(newPage));
@@ -130,9 +124,11 @@ const Contacts = () => {
           ))}
         </tbody>
       </table>
-      {/* <Pagination handlePageClick={handlePageClick} pageCount={pageCount} /> */}
-      <Pagination handlePaginate={handlePaginate} currentPage={page} totalPages={pageCount} />
-
+      <Pagination
+        handlePaginate={handlePaginate}
+        currentPage={page}
+        totalPages={pageCount}
+      />
       <DeleteModal
         showDeleteModal={showDeleteModal}
         handleCloseModal={handleCloseModal}
